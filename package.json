@@ -1,0 +1,22 @@
+{
+  "name": "Glo-master",
+  "version": "1.0.0",
+  "description": "Inspired by jQuery, Glo is a lightweight library that simplifies the use of Javascript in client-side HTML scripting. Glo's API provides concise methods for HTML document traversal and manipulation, as well as event handling and Ajax requests.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.5.6"
+  }
+}
