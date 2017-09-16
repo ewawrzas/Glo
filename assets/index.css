@@ -1,81 +1,3 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  background-color: black;
-  background-size: cover;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-@-webkit-keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
-  }
-}
-
-@-webkit-keyframes neon2 {
-  from {
-    box-shadow:
-      inset 0 0 10px #fff,
-      inset 4px 0 16px #f0f,
-      inset -4px 0 16px #0ff,
-      inset 4px 0 60px #f0f,
-      inset -4px 0 60px #0ff,
-      0 0 10px #fff,
-      -2px 0 16px #f0f,
-      2px 0 16px #0ff;
-  }
-  to {
-    display: none;
-    background-color: black;
-  }
-}
-
 .title {
   text-decoration: none;
   -webkit-transition: all 0.5s;
@@ -112,6 +34,34 @@ table {
   align-content: center;
 }
 
+.button-wrapper {
+  position: absolute;
+  z-index: 2;
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-wrapper button:hover {
+  cursor: pointer;
+}
+
+.button-wrapper button {
+  margin: 0px 30px;
+  padding: 10px;
+  font-size: 40px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: Monoton;
+  color: #fff;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  background-color: black;
+}
+
+
 .list-wrapper {
   width: 1600px;
   height: 800px;
@@ -119,14 +69,14 @@ table {
   position: absolute;
 }
 
-.group {
+.group1 {
   list-style: none;
   align-self: center;
   width: 1600px;
   height: 800px;
 }
 
-.list-els1 {
+.group li {
   margin: 10px;
   float: left;
   top: calc(50% - 30px);
@@ -134,33 +84,18 @@ table {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  /*box-shadow:
-    inset 0 0 10px #fff,
-    inset 4px 0 16px #f0f,
-    inset -4px 0 16px #0ff,
-    inset 4px 0 60px #f0f,
-    inset -4px 0 60px #0ff,
-    0 0 10px #fff,
-    -2px 0 16px #f0f,
-    2px 0 16px #0ff;*/
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
+}
+
+.list-els1 {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
     -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;
     animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .list-els2 {
-  /*padding: 10px;*/
-  margin: 10px;
-  /*position: absolute;*/
-  float: left;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
   box-shadow:
     inset 0 0 10px #fff,
     inset 4px 0 16px #008000,
@@ -173,15 +108,7 @@ table {
 }
 
 .list-els3 {
-  /*padding: 10px;*/
-  margin: 10px;
-  /*position: absolute;*/
-  float: left;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+
   box-shadow:
     inset 0 0 10px #fff,
     inset 4px 0 16px lightblue,
@@ -194,15 +121,7 @@ table {
 }
 
 .list-els4 {
-  /*padding: 10px;*/
-  margin: 10px;
-  /*position: absolute;*/
-  float: left;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+
   box-shadow:
     inset 0 0 10px black,
     inset 4px 0 16px purple,
@@ -215,15 +134,7 @@ table {
 }
 
 .list-els6 {
-  /*padding: 10px;*/
-  margin: 10px;
-  /*position: absolute;*/
-  float: left;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+
   box-shadow:
     inset 0 0 10px red,
     inset 4px 0 16px #f05d5d,
@@ -236,15 +147,7 @@ table {
 }
 
 .list-els5 {
-  /*padding: 10px;*/
-  margin: 10px;
-  /*position: absolute;*/
-  float: left;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+
   box-shadow:
     inset 0 0 10px yellow,
     inset 4px 0 16px white,
@@ -254,4 +157,30 @@ table {
     0 0 10px yellow,
     -2px 0 16px white,
     2px 0 16px orange;
+}
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+@-webkit-keyframes neon2 {
+  from {
+    box-shadow:
+      inset 0 0 10px #fff,
+      inset 4px 0 16px #f0f,
+      inset -4px 0 16px #0ff,
+      inset 4px 0 60px #f0f,
+      inset -4px 0 60px #0ff,
+      0 0 10px #fff,
+      -2px 0 16px #f0f,
+      2px 0 16px #0ff;
+  }
+  to {
+  background-color: black;
+  }
 }
