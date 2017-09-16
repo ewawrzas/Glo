@@ -47,6 +47,166 @@ table {
   border-spacing: 0;
 }
 
-.group li {
-  border: black 1px solid;
+/*.main {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 700px;
+  min-height: 600px;
+}*/
+
+.main {
+  min-width: 800px;
+  min-height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  /*position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;*/
+}
+
+.group {
+  /*border: black 1px solid;*/
+  list-style: none;
+  align-self: center;
+}
+
+.list-els1 {
+  /*padding: 10px;*/
+  margin: 10px;
+  /*position: absolute;*/
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 10px #fff,
+    inset 4px 0 16px #f0f,
+    inset -4px 0 16px #0ff,
+    inset 4px 0 60px #f0f,
+    inset -4px 0 60px #0ff,
+    0 0 10px #fff,
+    -2px 0 16px #f0f,
+    2px 0 16px #0ff;
+}
+
+.list-els2 {
+  /*padding: 10px;*/
+  margin: 10px;
+  /*position: absolute;*/
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 10px #fff,
+    inset 4px 0 16px #008000,
+    inset -4px 0 16px #0ff,
+    inset 4px 0 60px #008000,
+    inset -4px 0 60px #0ff,
+    0 0 10px #fff,
+    -2px 0 16px #008000,
+    2px 0 16px #0ff;
+}
+
+.list-els3 {
+  /*padding: 10px;*/
+  margin: 10px;
+  /*position: absolute;*/
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 10px #fff,
+    inset 4px 0 16px lightblue,
+    inset -4px 0 16px #0ff,
+    inset 4px 0 60px lightblue,
+    inset -4px 0 60px #0ff,
+    0 0 10px #fff,
+    -2px 0 16px lightblue,
+    2px 0 16px #0ff;
+}
+
+.list-els4 {
+  /*padding: 10px;*/
+  margin: 10px;
+  /*position: absolute;*/
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 10px black,
+    inset 4px 0 16px purple,
+    inset -4px 0 16px #0ff,
+    inset 4px 0 60px purple,
+    inset -4px 0 60px #0ff,
+    0 0 10px black,
+    -2px 0 16px purple,
+    2px 0 16px #0ff;
+}
+
+.list-els6 {
+  /*padding: 10px;*/
+  margin: 10px;
+  /*position: absolute;*/
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 10px red,
+    inset 4px 0 16px #f05d5d,
+    inset -4px 0 16px magenta,
+    inset 4px 0 60px #f05d5d,
+    inset -4px 0 60px magenta,
+    0 0 10px red,
+    -2px 0 16px #f05d5d,
+    2px 0 16px magenta;
+}
+
+.list-els5 {
+  /*padding: 10px;*/
+  margin: 10px;
+  /*position: absolute;*/
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 10px yellow,
+    inset 4px 0 16px white,
+    inset -4px 0 16px orange,
+    inset 4px 0 60px white,
+    inset -4px 0 60px orange,
+    0 0 10px yellow,
+    -2px 0 16px white,
+    2px 0 16px orange;
 }
