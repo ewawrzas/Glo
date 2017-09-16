@@ -30,6 +30,8 @@ html, body {
 
 body {
   line-height: 1.5;
+  background-color: black;
+  background-size: cover;
 }
 ol, ul {
   list-style: none;
@@ -56,6 +58,24 @@ table {
   }
 }
 
+@-webkit-keyframes neon2 {
+  from {
+    box-shadow:
+      inset 0 0 10px #fff,
+      inset 4px 0 16px #f0f,
+      inset -4px 0 16px #0ff,
+      inset 4px 0 60px #f0f,
+      inset -4px 0 60px #0ff,
+      0 0 10px #fff,
+      -2px 0 16px #f0f,
+      2px 0 16px #0ff;
+  }
+  to {
+    display: none;
+    background-color: black;
+  }
+}
+
 .title {
   text-decoration: none;
   -webkit-transition: all 0.5s;
@@ -72,27 +92,38 @@ table {
   text-align: center;
   font-size: 25em;
   margin: 30px 0 30px 0;
-  align-self: flex-start;
+  /*align-self: flex-start;*/
+  display: flex;
+  justify-content: space-around;
+  z-index: 100;
+  position: absolute;
 }
 
 .main {
+  padding-top: 100px;
   min-width: 1600px;
-  min-height: 1600px;
+  min-height: 800px;
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   background-color: black;
   justify-content: center;
   align-items: center;
+  align-content: center;
+}
+
+.list-wrapper {
+  width: 1600px;
+  height: 800px;
+  z-index: 1;
+  position: absolute;
 }
 
 .group {
-  margin-top: 100px;
-  margin-bottom: 100px;
   list-style: none;
   align-self: center;
   width: 1600px;
-  height: 1600px;
-  display: none;
+  height: 800px;
 }
 
 .list-els1 {
@@ -103,7 +134,7 @@ table {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  box-shadow:
+  /*box-shadow:
     inset 0 0 10px #fff,
     inset 4px 0 16px #f0f,
     inset -4px 0 16px #0ff,
@@ -111,7 +142,13 @@ table {
     inset -4px 0 60px #0ff,
     0 0 10px #fff,
     -2px 0 16px #f0f,
-    2px 0 16px #0ff;
+    2px 0 16px #0ff;*/
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .list-els2 {
