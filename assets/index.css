@@ -10,6 +10,23 @@
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
+.title2 {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  font-family: Monoton;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.demo4 {
+  height: 100%;
+  width: 100%;
+}
+
 .title-wrapper {
   text-align: center;
   font-size: 25em;
@@ -236,7 +253,6 @@
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
   }
 }
-
 
 
 @-webkit-keyframes neon2 {
