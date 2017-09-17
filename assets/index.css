@@ -14,7 +14,6 @@
   text-align: center;
   font-size: 25em;
   margin: 30px 0 30px 0;
-  /*align-self: flex-start;*/
   display: flex;
   justify-content: space-around;
   z-index: 100;
@@ -22,7 +21,7 @@
 }
 
 .main {
-  padding-top: 100px;
+  padding-top: 30px;
   min-width: 1600px;
   min-height: 800px;
   background-size: cover;
@@ -39,6 +38,7 @@
   z-index: 2;
   align-self: flex-start;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -47,22 +47,26 @@
 }
 
 .button-wrapper button {
-  margin: 0px 30px;
-  padding: 10px;
-  font-size: 40px;
+  margin: 10px 10px;
+  /*padding: 30px;*/
+  font-size: 35px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  font-family: Monoton;
+  font-family: 'Lobster', cursive;
   color: #fff;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
-  background-color: black;
+  -webkit-animation: neon1button 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1button 1.5s ease-in-out infinite alternate;
+  animation: neon1button 1.5s ease-in-out infinite alternate;
+  background-color: transparent;
 }
 
+.button-wrapper button:nth-child(2) {
+  font-size: 25px;
+}
 
 .list-wrapper {
+  padding-top: 100px;
   width: 1600px;
   height: 800px;
   z-index: 1;
@@ -72,27 +76,54 @@
 .group1 {
   list-style: none;
   align-self: center;
-  width: 1600px;
-  height: 800px;
+  width: 1200px;
+  height: 700px;
 }
 
-.group li {
+.group3 {
+  list-style: none;
+  align-self: center;
+  width: 1400px;
+  height: 800px;
+  animation-name: rubberBand;
+}
+
+.group3 li {
+  width: 120px;
+  height: 120px;
   margin: 10px;
   float: left;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
   border-radius: 50%;
+  background-color: white;
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+   animation: 4s linear 0s infinite alternate move_eye;
+}
+
+.group1 li {
+  margin: 10px;
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+  -webkit-animation: neon2 .5s ease-in-out infinite alternate;
+  -moz-animation: neon2 .5s ease-in-out infinite alternate;
+  animation: neon2 .5s ease-in-out infinite alternate;
 }
 
 .list-els1 {
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     transition: all 1s;
-    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-    animation: neon2 1.5s ease-in-out infinite alternate;
+    -webkit-animation: neon2 .5s ease-in-out infinite alternate;
+    -moz-animation: neon2 .5s ease-in-out infinite alternate;
+    animation: neon2 .5s ease-in-out infinite alternate;
 }
 
 .list-els2 {
@@ -105,10 +136,15 @@
     0 0 10px #fff,
     -2px 0 16px #008000,
     2px 0 16px #0ff;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    transition: all 1.5s;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .list-els3 {
-
   box-shadow:
     inset 0 0 10px #fff,
     inset 4px 0 16px lightblue,
@@ -121,7 +157,6 @@
 }
 
 .list-els4 {
-
   box-shadow:
     inset 0 0 10px black,
     inset 4px 0 16px purple,
@@ -134,7 +169,6 @@
 }
 
 .list-els6 {
-
   box-shadow:
     inset 0 0 10px red,
     inset 4px 0 16px #f05d5d,
@@ -147,7 +181,6 @@
 }
 
 .list-els5 {
-
   box-shadow:
     inset 0 0 10px yellow,
     inset 4px 0 16px white,
@@ -159,6 +192,33 @@
     2px 0 16px orange;
 }
 
+.group2 {
+  list-style: none;
+  align-self: center;
+  width: 1600px;
+  height: 800px;
+}
+
+.group2 li {
+  background-color: white;
+  margin: 10px;
+  float: left;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  transition: all 2s;
+  -webkit-animation: neon3 2.5s ease-in-out infinite alternate;
+  -moz-animation: neon3 2.5s ease-in-out infinite alternate;
+  animation: neon3 2.5s ease-in-out infinite alternate;*/
+}
+
+@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+
 @-webkit-keyframes neon1 {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
@@ -167,6 +227,17 @@
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
   }
 }
+
+@-webkit-keyframes neon1button {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+
 
 @-webkit-keyframes neon2 {
   from {
@@ -183,4 +254,56 @@
   to {
   background-color: black;
   }
+}
+
+@-webkit-keyframes neon3 {
+  from {
+    box-shadow:
+      inset 0 0 10px yellow,
+      inset 4px 0 16px white,
+      inset -4px 0 16px lightyellow,
+      inset 4px 0 60px white,
+      inset -4px 0 60px lightyellow,
+      0 0 10px yellow,
+      -2px 0 16px white,
+      2px 0 16px lightyellow;
+  }
+  to {
+    box-shadow:
+      inset 0 0 10px #ffe766,
+      inset 4px 0 16px yellow,
+      inset -4px 0 16px #ffffff,
+      inset 4px 0 60px yellow,
+      inset -4px 0 60px #ffffff,
+      0 0 10px #ffe766,
+      -2px 0 16px yellow,
+      2px 0 16px #ffffff;
+  }
+}
+
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  animation-name: tada;
 }
