@@ -87,7 +87,7 @@ var $gl0 = function $gl0(arg) {
   if (arg instanceof HTMLElement) {
     return new _dom_node_collection2.default([arg]);
   } else if (typeof arg === 'function') {
-    debugger;
+
     return docReadyCallback(arg);
   } else if (typeof arg === "string") {
     if (shouldCreateNewElement(arg)) {
@@ -111,7 +111,7 @@ $gl0(function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   docReady = true;
-  debugger;
+
   queue.forEach(function (cb) {
     return cb();
   });
@@ -311,7 +311,7 @@ var DOMNodeCollection = function () {
     key: 'on',
     value: function on(action, callback) {
       this.elements.forEach(function (el) {
-        debugger;
+
         el.addEventListener(action, callback);
         var actionQueue = 'callback-' + action.toLowerCase();
         if (!el[actionQueue]) {
@@ -379,7 +379,7 @@ var View = function () {
     key: "handleKeyEvent",
     value: function handleKeyEvent(event) {
       event.preventDefault();
-      debugger;
+
       switch (event.keyCode) {
         case 37:
           this.demo2();
