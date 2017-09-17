@@ -499,9 +499,8 @@ var View = function () {
     value: function demo4() {
       this.$gl0el.empty();
       this.setUpBoard();
-      var $gl0title = this.$gl0el.find('h1');
+      var $gl0title = $gl0('h1');
       $gl0title.addClass('tada');
-      // this.$gl0el.append($gl0title)
     }
   }]);
 
