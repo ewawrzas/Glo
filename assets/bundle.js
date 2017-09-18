@@ -365,14 +365,12 @@ var View = function () {
     this.setUpButtons();
     this.randomColorString = this.randomColorString.bind(this);
     this.setUpButtons = this.setUpButtons.bind(this);
-    // this.installClickHandlers = this.installClickHandlers.bind(this);
+
     this.demo1 = this.demo1.bind(this);
     this.demo2 = this.demo2.bind(this);
     this.demo3 = this.demo3.bind(this);
     this.demo4 = this.demo4.bind(this);
     window.addEventListener("keydown", this.handleKeyEvent.bind(this));
-    // window.addEventListener('click', this.demo1.bind(this));
-    // window.addEventListener('mouseover', this.demo2.bind(this));
   }
 
   _createClass(View, [{
@@ -441,6 +439,7 @@ var View = function () {
       console.log('yes');
       this.$gl0el.empty();
       this.setUpBoard();
+      this.setUpButtons();
       var classes = ['list-els1', 'list-els2', 'list-els3', 'list-els4', 'list-els5', 'list-els6'];
       var $gl0ul1 = $gl0("<ul>");
       $gl0ul1.addClass('group1');
@@ -461,6 +460,7 @@ var View = function () {
       console.log('demo2');
       this.$gl0el.empty();
       this.setUpBoard();
+      this.setUpButtons();
       var $gl0ul2 = $gl0("<ul>");
       $gl0ul2.addClass('group2');
 
@@ -478,6 +478,7 @@ var View = function () {
     value: function demo3() {
       this.$gl0el.empty();
       this.setUpBoard();
+      this.setUpButtons();
       var $gl0title = this.$gl0el.find('h1');
       var $gl0titleDiv = $gl0('<div>');
       $gl0titleDiv.addClass('title-wrapper');
@@ -499,6 +500,7 @@ var View = function () {
     value: function demo4() {
       this.$gl0el.empty();
       this.setUpBoard();
+      this.setUpButtons();
       var $gl0title = $gl0('h1');
       $gl0title.addClass('tada');
     }

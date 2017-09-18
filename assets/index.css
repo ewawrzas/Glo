@@ -10,18 +10,6 @@
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
-.title2 {
-  text-decoration: none;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-  color: #fff;
-  font-family: Monoton;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
-}
-
 .demo4 {
   height: 100%;
   width: 100%;
@@ -52,7 +40,7 @@
 
 .button-wrapper {
   position: absolute;
-  z-index: 2;
+  /*z-index: 2;*/
   align-self: flex-start;
   display: flex;
   flex-direction: column;
@@ -86,8 +74,9 @@
   padding-top: 100px;
   width: 1600px;
   height: 800px;
-  z-index: 1;
+  /*z-index: 2;*/
   position: absolute;
+  margin-top: 100px;
 }
 
 .group1 {
