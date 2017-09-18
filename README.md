@@ -4,7 +4,7 @@ Inspired by jQuery, Glo is a lightweight library that simplifies the use of Java
 
 ## Using Glo
 
-Simply source the Glo library using the following `<script>` tag in the head of your HTML document and run `webpack` to get started.
+To use the Glo library paste the following `<script>` tag in the head of your HTML document.
 
 `<script type="text/javascript" src="lib/main.js" ></script>`
 
@@ -56,4 +56,4 @@ Simply source the Glo library using the following `<script>` tag in the head of 
 
 ## Demo
 
-To see an example of a project built using Glo, view the Glo demo code. The demo can be run by cloning the Glo repository and running the html file locally.
+To see an example of a project built using Glo, view the [demo](http://elliewawrzaszek.us/Glo/). The demo can also be run by cloning the Glo repository and running the html file locally.
