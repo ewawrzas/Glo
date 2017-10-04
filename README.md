@@ -56,4 +56,6 @@ To use the Glo library paste the following `<script>` tag in the head of your HT
 
 ## Demo
 
+![alt text](https://github.com/ewawrzas/Glo/blob/master/assets/Screen%20Shot%202017-10-03%20at%208.09.30%20PM.png)
+
 To see an example of a project built using Glo, view the [demo](http://elliewawrzaszek.us/Glo/). The demo can also be run by cloning the Glo repository and running the html file locally.
