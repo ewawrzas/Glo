@@ -18,35 +18,41 @@
 .title-wrapper {
   text-align: center;
   font-size: 25em;
-  margin: 30px 0 30px 0;
-  display: flex;
-  justify-content: space-around;
+  margin: 0.075em auto 0.075em auto;
+  width: 85%;
+  /*display: flex;
+  justify-content: space-around;*/
   z-index: 100;
   position: absolute;
+  top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .main {
-  padding-top: 50px;
-  min-width: 1600px;
-  min-height: 800px;
-  background-size: cover;
-  display: flex;
-  flex-wrap: wrap;
+  /*padding-top: 3.125em;*/
+  width: 100%;
+  height: 100vh;
+  /*min-width: 100.000em;
+  min-height: 50.000em;*/
+  /*background-size: cover;*/
+  /*display: flex;
+  flex-wrap: wrap;*/
   background-color: black;
-  justify-content: center;
+  /*justify-content: center;
   align-items: center;
-  align-content: center;
+  align-content: center;*/
 }
 
 
-.button-wrapper {
+/*.button-wrapper {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+}*/
 
-.button-wrapper button {
+/*.button-wrapper button {
   margin: 10px 10px;
   font-size: 35px;
   -webkit-transition: all 1.5s;
@@ -62,21 +68,28 @@
 
 .button-wrapper button:nth-child(2) {
   font-size: 25px;
-}
+}*/
 
-.list-wrapper {
+/*.list-wrapper {
   padding-top: 100px;
   width: 1600px;
   height: 800px;
   position: absolute;
   margin-top: 100px;
-}
+}*/
 
 .group1 {
-  list-style: none;
-  align-self: center;
-  width: 1200px;
-  height: 700px;
+  position: absolute;
+  margin: 0em auto;
+  width: auto;
+  min-width: 90%;
+  height: 90%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .group3 {
@@ -101,12 +114,12 @@
 }
 
 .group1 li {
-  margin: 10px;
+  margin: 0.7vw;
   float: left;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  width: 30px;
-  height: 30px;
+  width: 5vw;
+  height: 5vw;
   border-radius: 50%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -193,26 +206,33 @@
 
 .group2 {
   list-style: none;
-  align-self: center;
-  width: 1600px;
-  height: 800px;
+  margin: 0 auto;
+  width: 96%;
+  height: 96vh;
+  overflow: hidden;
 }
 
 .group2 li {
   background-color: white;
-  margin: 10px;
+  margin: 0.7vw;
   float: left;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
+  width: 5vw;
+  height: 5vw;
   border-radius: 50%;
   -webkit-transition: all 2s;
   -moz-transition: all 2s;
   transition: all 2s;
-  -webkit-animation: neon3 2.5s ease-in-out infinite alternate;
-  -moz-animation: neon3 2.5s ease-in-out infinite alternate;
-  animation: neon3 2.5s ease-in-out infinite alternate;*/
+  box-shadow:
+    inset 0 0 10px blue,
+    inset 4px 0 16px #f05d5d,
+    inset -4px 0 16px purple,
+    inset 4px 0 60px #f05d5d,
+    inset -4px 0 60px white,
+    0 0 10px blue,
+    -2px 0 16px #f05d5d,
+    2px 0 16px magenta;
 }
 
 @-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
@@ -311,4 +331,46 @@
   color: #fff;
   font-family: Monoton;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6b1bff, 0 0 70px #6b1bff, 0 0 80px #6b1bff, 0 0 100px #6b1bff, 0 0 150px #6b1bff;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation: 2s linear 0s infinite alternate bounceIn;
 }

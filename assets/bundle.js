@@ -361,8 +361,8 @@ var View = function () {
     _classCallCheck(this, View);
 
     this.$gl0el = $gl0el;
-    this.setUpBoard();
     this.setUpButtons();
+    this.setUpBoard();
     this.randomColorString = this.randomColorString.bind(this);
     this.setUpButtons = this.setUpButtons.bind(this);
 
@@ -408,29 +408,19 @@ var View = function () {
     value: function setUpBoard() {
       this.$gl0el.empty();
       var $gl0div1 = $gl0("<div>");
-      var $gl0div2 = $gl0("<div>");
       var $gl0h1 = $gl0("<h1>");
 
       $gl0div1.addClass('title-wrapper');
       $gl0h1.addClass('title');
-      $gl0div2.addClass('list-wrapper');
 
       $gl0h1.append("GLO");
       $gl0div1.append($gl0h1);
       this.$gl0el.append($gl0div1);
-      this.$gl0el.append($gl0div2);
     }
   }, {
     key: "setUpButtons",
     value: function setUpButtons() {
       var $gl0div3 = $gl0("<div>");
-      $gl0div3.addClass('button-wrapper');
-
-      var $gl0button3 = $gl0("<button>");
-      var $gl0button1 = $gl0("<button>");
-      $gl0button3.html('Use the arrow keys to see GLO in action');
-      $gl0button1.html('Press escape to return to the main screen');
-      $gl0div3.append($gl0button3).append($gl0button1);
       this.$gl0el.append($gl0div3);
     }
   }, {
@@ -464,10 +454,10 @@ var View = function () {
       var $gl0ul2 = $gl0("<ul>");
       $gl0ul2.addClass('group2');
 
-      for (var rowIdx = 0; rowIdx < 12; rowIdx++) {
+      for (var rowIdx = 0; rowIdx < 10; rowIdx++) {
         for (var colIdx = 0; colIdx < 20; colIdx++) {
           var $gl0li = $gl0("<li>");
-
+          $gl0li.addClass('bounceIn');
           $gl0ul2.append($gl0li);
         }
       }
