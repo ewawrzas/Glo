@@ -362,9 +362,10 @@ var View = function () {
 
     this.$gl0el = $gl0el;
     this.setUpButtons();
-    this.setUpBoard();
+    this.startScreen();
     this.randomColorString = this.randomColorString.bind(this);
     this.setUpButtons = this.setUpButtons.bind(this);
+    this.startScreen = this.startScreen.bind(this);
 
     this.demo1 = this.demo1.bind(this);
     this.demo2 = this.demo2.bind(this);
@@ -418,6 +419,20 @@ var View = function () {
       this.$gl0el.append($gl0div1);
     }
   }, {
+    key: "startScreen",
+    value: function startScreen() {
+      this.$gl0el.empty();
+      var $gl0wrapper = $gl0("<div>");
+      var $gl0Button1 = $gl0("<button>");
+      var $gl0Button2 = $gl0("<button>");
+      $gl0wrapper.addClass('button-wrapper');
+      $gl0Button1.append("Welcome to GLO!");
+      $gl0Button2.append("Use the arrow keys to see what GLO can do!");
+      $gl0wrapper.append($gl0Button1);
+      $gl0wrapper.append($gl0Button2);
+      this.$gl0el.append($gl0wrapper);
+    }
+  }, {
     key: "setUpButtons",
     value: function setUpButtons() {
       var $gl0div3 = $gl0("<div>");
@@ -426,7 +441,6 @@ var View = function () {
   }, {
     key: "demo1",
     value: function demo1() {
-      console.log('yes');
       this.$gl0el.empty();
       this.setUpBoard();
       this.setUpButtons();
@@ -447,7 +461,6 @@ var View = function () {
   }, {
     key: "demo2",
     value: function demo2() {
-      console.log('demo2');
       this.$gl0el.empty();
       this.setUpBoard();
       this.setUpButtons();

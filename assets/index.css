@@ -45,14 +45,16 @@
 }
 
 
-/*.button-wrapper {
-  align-self: flex-start;
+.button-wrapper {
+  align-self: center;
+  align-content: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}*/
+  justify-content: center;
+  height: 100%;
+}
 
-/*.button-wrapper button {
+.button-wrapper button {
   margin: 10px 10px;
   font-size: 35px;
   -webkit-transition: all 1.5s;
@@ -65,18 +67,6 @@
   animation: neon1button 1.5s ease-in-out infinite alternate;
   background-color: transparent;
 }
-
-.button-wrapper button:nth-child(2) {
-  font-size: 25px;
-}*/
-
-/*.list-wrapper {
-  padding-top: 100px;
-  width: 1600px;
-  height: 800px;
-  position: absolute;
-  margin-top: 100px;
-}*/
 
 .group1 {
   position: absolute;
@@ -95,8 +85,8 @@
 .group3 {
   list-style: none;
   align-self: center;
-  width: 1400px;
-  height: 800px;
+  width: 100%;
+  height: 100vh;
   animation-name: rubberBand;
 }
 
@@ -114,12 +104,12 @@
 }
 
 .group1 li {
-  margin: 0.7vw;
+  margin: 1vw;
   float: left;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  width: 5vw;
-  height: 5vw;
+  width: 3vw;
+  height: 3vw;
   border-radius: 50%;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -219,20 +209,20 @@
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   width: 5vw;
-  height: 5vw;
+  height: 10vw;
   border-radius: 50%;
   -webkit-transition: all 2s;
   -moz-transition: all 2s;
   transition: all 2s;
   box-shadow:
-    inset 0 0 10px blue,
+    inset 0 0 10px white,
     inset 4px 0 16px #f05d5d,
-    inset -4px 0 16px purple,
+    inset -4px 0 16px yellow,
     inset 4px 0 60px #f05d5d,
     inset -4px 0 60px white,
     0 0 10px blue,
     -2px 0 16px #f05d5d,
-    2px 0 16px magenta;
+    2px 0 16px yellow;
 }
 
 @-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
