@@ -371,6 +371,7 @@ var View = function () {
     this.demo2 = this.demo2.bind(this);
     this.demo3 = this.demo3.bind(this);
     this.demo4 = this.demo4.bind(this);
+    this.changeColors = this.changeColors.bind(this);
     window.addEventListener("keydown", this.handleKeyEvent.bind(this));
   }
 
@@ -391,6 +392,9 @@ var View = function () {
           break;
         case 40:
           this.demo4();
+          break;
+        case 16:
+          this.changeColors();
           break;
         case 27:
           this.setUpBoard();
@@ -506,6 +510,12 @@ var View = function () {
       this.setUpButtons();
       var $gl0title = $gl0('h1');
       $gl0title.addClass('tada');
+    }
+  }, {
+    key: "changeColors",
+    value: function changeColors() {
+      var $gl0title = $gl0('h1');
+      $gl0title.css('color', "" + this.randomColorString());
     }
   }]);
 
